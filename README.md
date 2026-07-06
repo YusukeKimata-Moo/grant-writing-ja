@@ -22,27 +22,25 @@ Claude 固有機能に依存しないプレーンな Markdown だけで構成し
 
 ## 導入
 
-### Claude Code の場合
-
-このリポジトリを、Claude が探すスキル置き場(`~/.claude/skills/` もしくは `~/.agents/skills/`)に置きます。
+このリポジトリを、お使いのエージェントのスキルフォルダに配置します。フォルダはエージェントごとに異なります
+(例: Claude Code は `~/.claude/skills/`、Codex は `~/.codex/skills/` または共通の `~/.agents/skills/`)。
 
 ```bash
-git clone <このリポジトリのURL> ~/.agents/skills/grant-writing-ja
+git clone <このリポジトリのURL> <エージェントのスキルフォルダ>/grant-writing-ja
 ```
 
-Windows で `~/.agents/skills/` から `~/.claude/skills/` へリンクを張る場合は、
-`ln -s` ではなくジャンクションを使ってください(Git Bash の `ln -s` は Windows で実コピーになるため)。
+複数のエージェントで共有したい場合は、実体を1か所(例: `~/.agents/skills/grant-writing-ja`)に置き、
+各エージェントのスキルフォルダからリンクを張ると重複を避けられます。Windows では `ln -s` は実コピーに
+なるため、ジャンクションを使ってください。
 
 ```bat
 cmd.exe /c "mklink /D C:\Users\<user>\.claude\skills\grant-writing-ja C:\Users\<user>\.agents\skills\grant-writing-ja"
 ```
 
-### Codex・Antigravity など他エージェントの場合
-
-スキル置き場の概念がないエージェントでは、`SKILL.md` のパスを直接指示に含めて読ませます。
+スキルフォルダの概念がないエージェントでは、`SKILL.md` のパスを直接指示に含めて読ませます。
 
 ```
-このファイルの手順に従って申請書を書いて: <clone先>/grant-writing-ja/SKILL.md
+このファイルの手順に従って申請書を書いて: <配置先>/grant-writing-ja/SKILL.md
 ```
 
 `SKILL.md` は冒頭でワークフローを説明し、必要な参照ファイルを各フェーズで読むよう指示しているため、
