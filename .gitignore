@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# 執筆時の作業ファイル(骨子・草稿は各作業ディレクトリに生成する想定)
+outline.md
+draft.md
