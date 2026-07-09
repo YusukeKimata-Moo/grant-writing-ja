@@ -6,7 +6,7 @@ Claude 固有機能に依存しないプレーンな Markdown だけで構成し
 
 対応種目:
 
-- **科研費**(基盤 B/C・若手)
+- **科研費**(基盤 B/C・若手、挑戦的研究(萌芽・開拓)、学術変革領域研究(A)公募研究、学術変革領域研究(A)(B)領域提案)
 - **JST**(さきがけ・創発的研究支援事業)
 - **民間財団助成**
 
@@ -75,7 +75,10 @@ grant-writing-ja/
 ├── README.md                      このファイル(人間向けの導入)
 ├── references/
 │   ├── thinking.md                執筆前の思考手順(読者モデル・主張の一文化・段落設計)
-│   ├── structure-kakenhi.md       科研費の様式構成と審査基準対応
+│   ├── structure-kakenhi.md       科研費(基盤・若手)の様式構成と審査基準対応
+│   ├── structure-kakenhi-chousen.md 科研費 挑戦的研究(萌芽・開拓)の構成と挑戦性の書き方
+│   ├── structure-gakuhen-koubo.md 学術変革領域研究(A)公募研究の構成(領域適合・連携)
+│   ├── structure-gakuhen-ryoiki.md 学術変革領域研究(A)(B)領域提案の構成(領域構想+計画研究)
 │   ├── structure-jst.md           JSTさきがけ・創発の構成と評価観点
 │   ├── structure-zaidan.md        民間財団助成の構成
 │   ├── style.md                   日本語文体規範とNG→OK対比例

@@ -1,6 +1,6 @@
 ---
 name: grant-writing-ja
-description: 日本語の研究費申請書(科研費、JSTさきがけ・創発、民間財団助成)を高品質かつ低トークンで執筆・改稿するスキル。申請書の新規執筆、骨子設計、既存草稿の改善、自己校閲のいずれかを依頼されたときに使用する。トリガー例:「科研費(の申請書)を書いて」「さきがけの研究構想を作りたい」「申請書の背景を改善して」「財団助成に出す文章を書いて」。
+description: 日本語の研究費申請書(科研費(基盤・若手・挑戦的研究(萌芽・開拓)・学術変革領域研究(公募研究/領域提案))、JSTさきがけ・創発、民間財団助成)を高品質かつ低トークンで執筆・改稿するスキル。申請書の新規執筆、骨子設計、既存草稿の改善、自己校閲のいずれかを依頼されたときに使用する。トリガー例:「科研費(の申請書)を書いて」「挑戦的研究(萌芽・開拓)の計画調書を書きたい」「学術変革領域(A)の公募研究に応募したい」「新しい学術変革領域を提案したい」「さきがけの研究構想を作りたい」「申請書の背景を改善して」「財団助成に出す文章を書いて」。
 ---
 
 # 日本語研究費申請書ライティング
@@ -24,7 +24,7 @@ description: 日本語の研究費申請書(科研費、JSTさきがけ・創発
 
 以下をユーザーから引き出す。不明点はまとめて一度に質問する(小出しにしない)。
 
-- **種目**: 科研費 / JST(さきがけ・創発) / 民間財団 → 対応する references/structure-*.md が決まる
+- **種目**: 科研費(基盤・若手 / 挑戦的研究(萌芽・開拓) / 学術変革領域研究(公募研究・領域提案)) / JST(さきがけ・創発) / 民間財団 → 対応する references/structure-*.md が決まる。挑戦的研究では萌芽か開拓か、学術変革では公募研究か領域提案(領域提案なら(A)か(B))かも確認する(様式・規模・評価軸が異なる)
 - **様式**: セクション構成と文字数・ページ数の制限。様式ファイルがあれば提示してもらう
 - **素材**: 研究内容のソース(研究メモ、過去の申請書、論文、口頭説明)。素材なしで創作しない
 - **文体の手本**: `examples/` ディレクトリに過去の申請書抜粋(*.md)があれば、執筆フェーズで最優先の手本として読む
@@ -32,7 +32,7 @@ description: 日本語の研究費申請書(科研費、JSTさきがけ・創発
 ### Phase 1: 設計(骨子の作成と承認)
 
 1. `references/thinking.md`(執筆前の思考手順)と、種目に対応する `references/structure-*.md` を読む。
-   - 科研費: `structure-kakenhi.md` / JSTさきがけ・創発: `structure-jst.md` / 民間財団: `structure-zaidan.md`
+   - 科研費(基盤・若手): `structure-kakenhi.md` / 科研費(挑戦的研究(萌芽・開拓)): `structure-kakenhi-chousen.md` / 学術変革領域研究(A)公募研究: `structure-gakuhen-koubo.md` / 学術変革領域研究(A)(B)領域提案: `structure-gakuhen-ryoiki.md` / JSTさきがけ・創発: `structure-jst.md` / 民間財団: `structure-zaidan.md`
 2. thinking.md の手順に従い、骨子を箇条書きで作成する。骨子には必ず含める:
    - 中心主張(1文)
    - セクションごとの段落数と各段落のトピックセンテンス(1文ずつ)
@@ -63,7 +63,10 @@ Phase 1 を「現行草稿の骨子を逆算して弱点を特定する」に置
 | ファイル | 内容 | 読むタイミング |
 |---|---|---|
 | references/thinking.md | 執筆前の思考手順(読者モデル、主張の一文化、段落設計) | Phase 1 |
-| references/structure-kakenhi.md | 科研費の様式構成と審査基準対応 | Phase 1(科研費のみ) |
+| references/structure-kakenhi.md | 科研費(基盤・若手)の様式構成と審査基準対応 | Phase 1(基盤・若手のみ) |
+| references/structure-kakenhi-chousen.md | 科研費 挑戦的研究(萌芽・開拓)の構成と挑戦性の書き方 | Phase 1(挑戦的研究のみ) |
+| references/structure-gakuhen-koubo.md | 学術変革領域研究(A)公募研究の構成(領域適合・連携) | Phase 1(公募研究のみ) |
+| references/structure-gakuhen-ryoiki.md | 学術変革領域研究(A)(B)領域提案の構成(領域構想+計画研究) | Phase 1(領域提案のみ) |
 | references/structure-jst.md | JSTさきがけ・創発の構成と評価観点 | Phase 1(JSTのみ) |
 | references/structure-zaidan.md | 民間財団助成の構成 | Phase 1(財団のみ) |
 | references/style.md | 日本語文体規範とNG→OK対比例 | Phase 2 |
