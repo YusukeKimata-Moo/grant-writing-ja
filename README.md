@@ -58,6 +58,14 @@ cmd.exe /c "mklink /D C:\Users\<user>\.claude\skills\grant-writing-ja C:\Users\<
 エージェントはまず入力を確認し、**骨子を提示して承認を求めてから**本文を書きます。
 骨子の段階で方向性を直すことが、最も安く品質を上げる方法です。
 
+## Word ファイル(.docx)を直接編集する
+
+[`docx` スキル](https://github.com/anthropics/skills/tree/main/skills/docx)を同じスキルフォルダにセットアップしておくと、既存の `.docx` 草稿・様式ファイルを Markdown に変換せず直接編集できます。
+
+- 編集は必ず変更履歴(Track Changes)つきで行われ、本文を直接上書きしません
+- 保存先は元ファイルと別名(例: `<元ファイル名>_tracked_<日時>.docx`)になり、元ファイルは変更されません
+- `docx` スキルが無い環境では、この機能は使わず従来どおり Markdown 経由のフローで進みます
+
 ## 自分の過去申請書を手本にする
 
 `examples/` ディレクトリに、採択済みなど自分の過去申請書の抜粋を `.md` で置くと、
